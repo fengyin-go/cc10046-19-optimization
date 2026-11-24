@@ -3,5 +3,7 @@ from __future__ import annotations
 
 from app.routers import resource
 from app.routers import chains
+from app.routers import page_sample
 
-ROUTERS = [resource, chains]
+# page_sample 含 /api/page-sample 固定前缀，需要放在通配 /api/{module} 资源路由之前。
+ROUTERS = [page_sample, resource, chains]
